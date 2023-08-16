@@ -1,4 +1,4 @@
-package model.subModel;
+package model.sub_model;
 
 public class Properties {
     private String age;

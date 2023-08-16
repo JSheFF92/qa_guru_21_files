@@ -25,14 +25,12 @@ public class ZipZip {
     @DisplayName("Csv из ZIP")
     void csvTest() throws Exception {
         try (ZipInputStream zis = openZipStream()) {
-            verifyZipEntryContent(zis, "CsvTest.xlsx", inputStream -> {
+            verifyZipEntryContent(zis, "CsvTest.csv", inputStream -> {
 
                 Reader reader = new InputStreamReader(inputStream);
                 CSVReader csvReader = new CSVReader(reader);
                 List<String[]> content = csvReader.readAll();
-
                 Assertions.assertEquals(3, content.size());
-
                 final String[] firstRow = content.get(0);
                 final String[] secondRow = content.get(1);
                 final String[] thirdRow = content.get(2);

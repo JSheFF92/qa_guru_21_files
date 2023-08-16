@@ -1,7 +1,7 @@
 package model;
 
-import model.subModel.Address;
-import model.subModel.Properties;
+import model.sub_model.Address;
+import model.sub_model.Properties;
 
 import java.util.ArrayList;
 
